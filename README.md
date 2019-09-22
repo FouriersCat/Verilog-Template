@@ -8,12 +8,9 @@ Method1: Use the gui. [Demo](https://raw.githubusercontent.com/Rex1168/FpgaTool/
  2. Open a verilog file
  3. Click button "View HDL Inst"
  
- <iframe height=668 width=1088 src="https://raw.githubusercontent.com/Rex1168/FpgaTool/master/gif/FpgaTool.gif">
-
 
 Method2: Use script directly. [Demo](https://raw.githubusercontent.com/Rex1168/FpgaTool/master/gif/genHdlInst.gif)
  1. Run genHdlInst.py. You can run "python genHdlInst.py top.v" on the command line.
  2. It will generate its instance file named "inst_top.v"
  
  
-  <iframe height=668 width=1088 src="https://raw.githubusercontent.com/Rex1168/FpgaTool/master/gif/genHdlInst.gif">
