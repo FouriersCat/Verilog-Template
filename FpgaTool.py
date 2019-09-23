@@ -36,10 +36,6 @@ class ToolApp(FpgaTool):
     def __init__(self):
         FpgaTool.__init__(self)
         self.setWindowTitle('FPGA Tool')
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("pic/fpga.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.setWindowIcon(icon2)
-
         self.actionNew_File.triggered.connect(lambda: self.on_newfile(''))
         self.actionOpen_File.triggered.connect(self.on_openfile)
         self.actionSave_File.triggered.connect(self.on_savefile)
