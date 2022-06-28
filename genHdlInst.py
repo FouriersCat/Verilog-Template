@@ -13,6 +13,7 @@
 __author__ = 'Rex'
 
 import re
+import chardet
 
 
 class HdlError(Exception):
@@ -149,11 +150,12 @@ if __name__=='__main__':
         raise RuntimeError("source HDL file is not selected")
 
     sourcefile = sys.argv[1]
-    infile = open(sourcefile, encoding='UTF-8')
+    infile = open(sourcefile)
+    enco_ty = chardet.detect(infile.read())['encoding']
     fileCont = infile.read()
     instTempl = genHdlInst(fileCont)
     outfilename = 'inst_' + sourcefile
-    outfile = open(outfilename, 'w', encoding='UTF-8')
+    outfile = open(outfilename, 'w', encoding = enco_ty)
     outfile.write(instTempl)
     infile.close()
     outfile.close()
